@@ -173,7 +173,10 @@ nav {
   height: 100vh;
 }
 
-.main-wrap {
+.main-body {
+  display: flex;
+  align-items: center;
+  /* flex-direction: column; */
   height: 90%;
   width: 1280px;
   margin: auto;
@@ -188,18 +191,66 @@ nav {
   justify-content: space-between;
 }
 
-.content-col1 {
-  width: 19%;
-  height: 20px;
-  background-color: var(--primary-background-color);
+/* Sidebar */
+
+.sidebar {
+  position: sticky;
+  top: 10px;
+  flex: 0.25;
+  border-radius: 10px;
+  text-align: center;
+  height: fit-content;
 }
-.content-col2 {
-  width: 53%;
-  height: 20px;
-  background-color: var(--primary-background-color);
+
+.sidebar-profile-avatar {
+  margin-bottom: 10px;
 }
-.content-col3 {
-  width: 24%;
-  height: 20px;
+
+.sidebar-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px 10px 0px 0px;
   background-color: var(--primary-background-color);
+  padding-bottom: 10px;
+}
+
+.sidebar-top img {
+  margin-bottom: -20px;
+  width: 100%;
+  height: 80px;
+  border-radius: 10px 10px 0px 0px;
+  /* object-fit: cover; */
+}
+
+.sidebar-top h4 {
+  font-weight: bold;
+  color: gray;
+}
+
+.sidebar-stats-container {
+  background-color: var(--primary-background-color);
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.sidebar-stat {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0px;
+}
+
+.sidebar-stat p {
+  color: gray;
+}
+
+.sidebar-stat p:hover {
+  color: var(--linkedin-blue);
+  cursor: pointer;
+}
+
+.sidebar-stat .stat-number {
+  font-weight: bolder;
+  color: var(--linkedin-blue);
 }
