@@ -1,8 +1,12 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { ReactComponent as LogoIcon } from '../assets/logobug.svg';
-import { ReactComponent as SearchIcon } from '../assets/search.svg';
 import { ReactComponent as HomeIcon } from '../assets/home.svg';
+import { ReactComponent as NetworkIcon } from '../assets/mynetwork.svg';
+import { ReactComponent as JobsIcon } from '../assets/jobs.svg';
+import { ReactComponent as MessageIcon } from '../assets/messaging.svg';
+import { ReactComponent as NotificationIcon } from '../assets/notification.svg';
+import { ReactComponent as AvatarIcon } from '../assets/profileavatar.svg';
 
 function Navbar() {
   const navigate = useNavigate();
@@ -20,9 +24,6 @@ function Navbar() {
           <LogoIcon height='48px' width='48px' />
           <div className='navbar-searchbar'>
             <input id='search' type='text' placeholder='Search' />
-            {/* <div className='navbar-search-icon'>
-              <SearchIcon height='20px' width='20px' />
-            </div> */}
           </div>
         </div>
         <div className='navbar-col2'>
@@ -43,7 +44,7 @@ function Navbar() {
             <li onClick={() => navigate('/mynetwork')}>
               <div className='nav-pill-container'>
                 <div className='nav-pill-icon'>
-                  <HomeIcon
+                  <NetworkIcon
                     fill={pathMatchRoute('/mynetwork') ? '#2c2c2c' : '#8f8f8f'}
                     height='36px'
                     width='36px'
@@ -56,7 +57,7 @@ function Navbar() {
             <li onClick={() => navigate('/jobs')}>
               <div className='nav-pill-container'>
                 <div className='nav-pill-icon'>
-                  <HomeIcon
+                  <JobsIcon
                     fill={pathMatchRoute('/jobs') ? '#2c2c2c' : '#8f8f8f'}
                     height='36px'
                     width='36px'
@@ -69,7 +70,7 @@ function Navbar() {
             <li onClick={() => navigate('/')}>
               <div className='nav-pill-container'>
                 <div className='nav-pill-icon'>
-                  <HomeIcon
+                  <MessageIcon
                     fill={pathMatchRoute('/messaging') ? '#2c2c2c' : '#8f8f8f'}
                     height='36px'
                     width='36px'
@@ -82,7 +83,7 @@ function Navbar() {
             <li onClick={() => navigate('/notifications')}>
               <div className='nav-pill-container'>
                 <div className='nav-pill-icon'>
-                  <HomeIcon
+                  <NotificationIcon
                     fill={
                       pathMatchRoute('/notifications') ? '#2c2c2c' : '#8f8f8f'
                     }
@@ -97,7 +98,7 @@ function Navbar() {
             <li>
               <div className='nav-pill-container'>
                 <div className='nav-pill-icon'>
-                  <HomeIcon height='36px' width='36px' />
+                  <AvatarIcon height='36px' width='36px' />
                 </div>
                 <div className='nav-pill-text'>Me</div>
               </div>
