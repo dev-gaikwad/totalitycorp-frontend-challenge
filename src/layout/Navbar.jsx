@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { ReactComponent as LogoIcon } from '../assets/logobug.svg';
 import { ReactComponent as HomeIcon } from '../assets/home.svg';
@@ -9,6 +10,7 @@ import { ReactComponent as NotificationIcon } from '../assets/notification.svg';
 import { ReactComponent as AvatarIcon } from '../assets/profileavatar.svg';
 
 function Navbar() {
+  const [smallDisplay, setSmallDisplay] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -17,16 +19,25 @@ function Navbar() {
       return true;
     }
   };
+
   return (
-    <div className='navbar'>
+    <nav>
       <div className='navbar-wrap'>
         <div className='navbar-col1'>
-          <LogoIcon height='48px' width='48px' />
+          <LogoIcon
+            onClick={() => navigate('/')}
+            fill='#0072b1'
+            height='48px'
+            width='48px'
+          />
           <div className='navbar-searchbar'>
             <input id='search' type='text' placeholder='Search' />
           </div>
         </div>
-        <div className='navbar-col2'>
+        <div
+          className={smallDisplay ? 'navbar-col2-small' : 'navbar-col2'}
+          onClick={() => setSmallDisplay(false)}
+        >
           <ul>
             <li onClick={() => navigate('/')}>
               <div className='nav-pill-container'>
@@ -106,7 +117,13 @@ function Navbar() {
           </ul>
         </div>
       </div>
-    </div>
+
+      <button className='hamburger-menu' onClick={() => setSmallDisplay(true)}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
   );
 }
 

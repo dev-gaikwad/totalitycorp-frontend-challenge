@@ -2,29 +2,39 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
-  margin: 0;
+  background-color: var(--secondary-background-color);
 }
 :root {
+  --linkedin-blue: #0072b1;
   --primary-background-color: white;
   --secondary-background-color: #f3f2ef;
 }
 
 /* Navbar */
 
-.navbar {
-  width: 100vw;
-  height: 72px;
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
   background-color: var(--primary-background-color);
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .navbar-wrap {
   height: 72px;
-  width: 1200px;
-  margin: auto;
+  width: 1280px;
+  margin: 0 auto;
   padding: 12px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -43,14 +53,20 @@ body {
   background-color: lightgrey;
   padding-left: 30px;
   transition: width 0.5s ease-in;
+  cursor: text;
 }
 .navbar-searchbar input:focus {
   width: 300px;
   border: 1px solid black;
 }
 
+/* Navbar for bigger screens */
 .navbar-col2 {
-  display: flex;
+  display: none;
+  height: 90%;
+  flex: 1 1 0%;
+  justify-content: flex-end;
+  margin: 0px -16px;
 }
 
 .navbar-col2 ul {
@@ -61,13 +77,14 @@ body {
   margin-block-end: 0;
   padding-inline-start: 0;
 }
-
 .nav-pill-container {
-  margin-left: 20px;
   display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .nav-pill-container:hover {
@@ -75,24 +92,114 @@ body {
 }
 
 .nav-pill-icon {
+  display: none;
   margin: none;
 }
 .nav-pill-text {
   margin: none;
 }
 
+/* Navbar for smaller screens */
+.navbar-col2-small ul {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  list-style: none;
+  background-color: var(--primary-background-color);
+  color: var(--linkedin-blue);
+  left: 0;
+  top: 75px;
+  transition: all 0.5s ease-out;
+  width: 100%;
+}
+
+.navbar-col2-small .nav-pill-container {
+  padding: 10px;
+}
+
+.navbar-col2-small .nav-pill-container:hover {
+  border: 2px solid var(--primary-background-color);
+  background-color: var(--secondary-background-color);
+}
+
+.hamburger-menu {
+  display: block;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+
+  user-select: none;
+  appearance: none;
+  border: none;
+  background-color: inherit;
+}
+
+.hamburger-menu span {
+  display: block;
+  width: 32px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background-color: var(--linkedin-blue);
+  border-radius: 5px;
+  z-index: 1;
+
+  transform-origin: 0 0;
+  transition: 0.4s;
+}
+
+/* Responsive Navbar consitions */
+
+@media (min-width: 990px) {
+  .hamburger-menu {
+    display: none;
+  }
+  .navbar-col2 {
+    display: flex;
+  }
+  .nav-pill-icon {
+    display: flex;
+  }
+
+  .navbar-col2-small {
+  }
+}
+
 /* Main  */
 
 .main {
-  background-color: var(--secondary-background-color);
   width: 100vw;
   height: 100vh;
 }
 
 .main-wrap {
-  background-color: var(--primary-background-color);
   height: 90%;
-  width: 1200px;
+  width: 1280px;
   margin: auto;
   padding: 50px 0;
+}
+
+/* Content Cards */
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.content-col1 {
+  width: 19%;
+  height: 20px;
+  background-color: var(--primary-background-color);
+}
+.content-col2 {
+  width: 53%;
+  height: 20px;
+  background-color: var(--primary-background-color);
+}
+.content-col3 {
+  width: 24%;
+  height: 20px;
+  background-color: var(--primary-background-color);
 }
