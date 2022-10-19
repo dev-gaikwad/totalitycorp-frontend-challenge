@@ -161,9 +161,6 @@ nav {
   .nav-pill-icon {
     display: flex;
   }
-
-  .navbar-col2-small {
-  }
 }
 
 /* Main  */
@@ -180,7 +177,7 @@ nav {
   height: 90%;
   width: 1280px;
   margin: auto;
-  padding: 50px 0;
+  padding: 10px 0;
 }
 
 /* Content Feed */
@@ -196,7 +193,7 @@ nav {
 .sidebar {
   position: sticky;
   top: 10px;
-  flex: 0.25;
+  flex: 0.2;
   border-radius: 10px;
   text-align: center;
   height: fit-content;
@@ -260,6 +257,7 @@ nav {
   background-color: var(--primary-background-color);
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
 }
 
 .sidebar-bottom h4 {
@@ -277,4 +275,59 @@ nav {
   font-weight: bold;
   color: gray;
   list-style: none;
+  cursor: pointer;
+}
+
+.sidebar-bottom ul li:hover {
+  color: black;
+  background-color: lightgray;
+}
+
+/* Post feeds */
+
+.postfeed {
+  flex: 0.6;
+  margin: 0px 20px;
+}
+
+.input-container {
+  background-color: var(--primary-background-color);
+  padding: 10px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.post-input {
+  display: flex;
+  border: 1px solid lightgray;
+  padding: 10px;
+  color: gray;
+  border-radius: 25px;
+  padding-left: 20px;
+}
+
+.post-input form {
+  display: flex;
+  width: 100%;
+}
+
+.post-input form input {
+  border: none;
+  flex: 1;
+  margin: none;
+}
+.post-input form input:focus {
+  border: 1px solid var(--primary-background-color);
+}
+.post-btn {
+  padding: 10px;
+  background-color: var(--linkedin-blue);
+  border: 1px solid var(--linkedin-blue);
+  color: var(--primary-background-color);
+  border-radius: 10px;
+}
+
+.post-btn:disabled {
+  cursor: not-allowed;
 }
