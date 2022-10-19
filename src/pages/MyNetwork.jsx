@@ -1,7 +1,7 @@
 import React from 'react';
 
 function MyNetwork() {
-  return <div>MyNetwork</div>;
+  return;
 }
 
 export default MyNetwork;

@@ -4,6 +4,9 @@ import { ReactComponent as Avatar } from '../assets/profileavatar.svg';
 function Sidebar() {
   const username = 'Devendra';
   const email = 'i.devgaikwad@gmail.com';
+  const connectionStat = '108';
+  const viewStat = '73';
+
   return (
     <>
       <div className='sidebar'>
@@ -22,11 +25,31 @@ function Sidebar() {
         <div className='sidebar-stats-container'>
           <div className='sidebar-stat'>
             <p className='stat-title'>Your Connections</p>
-            <p className='stat-number'>109</p>
+            <p className='stat-number'>{connectionStat}</p>
           </div>
           <div className='sidebar-stat'>
             <p className='stat-title'>Who viewed you</p>
-            <p className='stat-number'>67</p>
+            <p className='stat-number'>{viewStat}</p>
+          </div>
+        </div>
+
+        <div className='sidebar-bottom'>
+          <h4>Recent</h4>
+          <div className='searchList'>
+            <ul>
+              <li>
+                <p>#ReactJs</p>
+              </li>
+              <li>
+                <p>#JavaScript</p>
+              </li>
+              <li>
+                <p>#Html</p>
+              </li>
+              <li>
+                <p>#CSS</p>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

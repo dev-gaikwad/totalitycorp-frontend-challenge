@@ -183,7 +183,7 @@ nav {
   padding: 50px 0;
 }
 
-/* Content Cards */
+/* Content Feed */
 
 .content-container {
   display: flex;
@@ -253,4 +253,28 @@ nav {
 .sidebar-stat .stat-number {
   font-weight: bolder;
   color: var(--linkedin-blue);
+}
+
+.sidebar-bottom {
+  margin-top: 10px;
+  background-color: var(--primary-background-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-bottom h4 {
+  font-weight: bolder;
+  text-align: left;
+  padding: 10px;
+}
+
+.sidebar-bottom ul {
+  text-align: left;
+}
+
+.sidebar-bottom ul li {
+  padding: 5px;
+  font-weight: bold;
+  color: gray;
+  list-style: none;
 }
