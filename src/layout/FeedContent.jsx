@@ -21,17 +21,7 @@ function FeedContent(props) {
         </div>
         <div className='feed-body'>
           {props.photo ? <img src={props.photo} alt='PostPic' /> : null}
-          {props.video ? (
-            <iframe
-              width='100%'
-              height='480'
-              src={props.video}
-              frameBorder='0'
-              allow='accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-              allowFullScreen
-              title='Video'
-            />
-          ) : null}
+
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro aut
             cum, dolor quisquam debitis vitae recusandae provident fuga nesciunt

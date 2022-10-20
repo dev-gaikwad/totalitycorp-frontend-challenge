@@ -1,31 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ReactComponent as LogoIcon } from '../assets/logobug.svg';
+import SidebarCard from './SidebarCard';
 
 function SidebarRight() {
   const year = new Date().getFullYear();
+  const newsList = [
+    'Job hiring in boom',
+    'Learn more about web3',
+    'Most affordable Indian cities',
+    'Are you worried about recession',
+    'No more news headline',
+    'IT freshers hiring game strong',
+    'Things to learn after something',
+  ];
   return (
     <>
       <div className='sidebar-right'>
-        <div className='sidebar-card'>
-          <h4>News</h4>
-          <div className='searchList'>
-            <ul>
-              <li>
-                <p>#ReactJs</p>
-              </li>
-              <li>
-                <p>#JavaScript</p>
-              </li>
-              <li>
-                <p>#Html</p>
-              </li>
-              <li>
-                <p>#CSS</p>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <SidebarCard title='News' list={newsList} />
         <div className='sidebar-card-reverse'>
           <div className='footer-container'>
             <Link to='/about'>About</Link>

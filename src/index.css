@@ -234,7 +234,8 @@ nav {
 }
 
 .sidebar-top h4 {
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: lighter;
   color: gray;
 }
 

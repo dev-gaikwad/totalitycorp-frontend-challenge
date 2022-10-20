@@ -1,11 +1,14 @@
 import React from 'react';
 import { ReactComponent as Avatar } from '../assets/profileavatar.svg';
+import SidebarCard from './SidebarCard';
 
 function Sidebar() {
   const username = 'Devendra';
   const email = 'i.devgaikwad@gmail.com';
   const connectionStat = '1080';
   const viewStat = '734';
+
+  const recentList = ['ReactJS', 'JavaScript', 'CSS3', 'HTML5'];
 
   const formattedConnectionStat = statsFormatter(connectionStat);
   const formattedViewStat = statsFormatter(viewStat);
@@ -45,26 +48,7 @@ function Sidebar() {
             <p className='stat-number'>{formattedViewStat}</p>
           </div>
         </div>
-
-        <div className='sidebar-card'>
-          <h4>Recent</h4>
-          <div className='searchList'>
-            <ul>
-              <li>
-                <p>#ReactJs</p>
-              </li>
-              <li>
-                <p>#JavaScript</p>
-              </li>
-              <li>
-                <p>#Html</p>
-              </li>
-              <li>
-                <p>#CSS</p>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <SidebarCard title='Recents' list={recentList} />
       </div>
     </>
   );

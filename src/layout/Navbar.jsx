@@ -39,11 +39,11 @@ function Navbar() {
           onClick={() => setSmallDisplay(false)}
         >
           <ul>
-            <li onClick={() => navigate('/feed')}>
+            <li onClick={() => navigate('/')}>
               <div className='nav-pill-container'>
                 <div className='nav-pill-icon'>
                   <HomeIcon
-                    fill={pathMatchRoute('/feed') ? '#2c2c2c' : '#8f8f8f'}
+                    fill={pathMatchRoute('/') ? '#2c2c2c' : '#8f8f8f'}
                     height='36px'
                     width='36px'
                   />
