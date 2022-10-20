@@ -33,7 +33,7 @@ function Sidebar() {
           </div>
         </div>
 
-        <div className='sidebar-bottom'>
+        <div className='sidebar-card'>
           <h4>Recent</h4>
           <div className='searchList'>
             <ul>
