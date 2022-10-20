@@ -106,12 +106,28 @@ function Navbar() {
               </div>
             </li>
 
-            <li>
+            <li className='nav-me'>
               <div className='nav-pill-container'>
                 <div className='nav-pill-icon'>
                   <AvatarIcon height='36px' width='36px' />
                 </div>
                 <div className='nav-pill-text'>Me</div>
+              </div>
+              <div className='me-dropdown'>
+                <div className='feed-title'>
+                  <AvatarIcon height='48px' width='48px' />
+                  <div className='feed-info'>
+                    <h3>Devendra</h3>
+                    <p>Open to new opportunities</p>
+                  </div>
+                </div>
+                <button className='view-profile-btn'>View Profile</button>
+                <div className='dropdown-menu'>
+                  <li>Account</li>
+                  <li>Help</li>
+                  <li>Privacy</li>
+                  <li>Sign Out</li>
+                </div>
               </div>
             </li>
           </ul>

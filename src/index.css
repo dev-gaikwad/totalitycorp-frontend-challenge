@@ -105,6 +105,41 @@ nav {
 .nav-pill-text {
   margin: none;
 }
+.me-dropdown {
+  display: none;
+  background-color: var(--primary-background-color);
+  padding: 10px;
+  position: absolute;
+}
+
+.nav-me:hover .me-dropdown {
+  display: block;
+  position: absolute;
+}
+
+.view-profile-btn {
+  width: 100%;
+  padding: 5px;
+  background-color: var(--primary-background-color);
+  color: var(--linkedin-blue);
+  border: 1px solid var(--linkedin-blue);
+  border-radius: 15px;
+}
+
+.view-profile-btn:hover {
+  background-color: var(--linkedin-blue);
+  color: var(--primary-background-color);
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  font-size: large;
+  padding: 10px;
+}
+.dropdown-menu li:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
 
 /* Navbar for smaller screens */
 .navbar-col2-small ul {
@@ -472,34 +507,6 @@ nav {
   margin-left: 5px;
 }
 
-/* Chatbox */
-.chat-head {
-  display: flex;
-  margin-bottom: 10px;
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
-  padding: 20px;
-}
-.chat-head:hover .chatbox-container {
-  transform: translateY(0%);
-}
-
-.chatbox-container {
-  width: 15vw;
-  height: fit-content;
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
-  background-color: var(--primary-background-color);
-  transform: translateY(101%);
-  transition: transform 0.5s ease-in-out;
-}
-
-.chat-info {
-  margin-left: 15px;
-}
-
 /* Responsive design */
 
 /* Responsive Navbar consitions */
@@ -557,11 +564,3 @@ nav {
     margin-left: 2px;
   }
 }
-/* 
-.main {
-
-  background-color: var(--secondary-background-color);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-} */
