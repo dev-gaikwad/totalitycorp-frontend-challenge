@@ -28,7 +28,7 @@ nav {
 }
 
 .navbar-wrap {
-  height: 72px;
+  height: 80px;
   width: 1280px;
   margin: 0 auto;
   padding: 12px;
@@ -196,7 +196,7 @@ nav {
 
 .sidebar {
   position: sticky;
-  top: 80px;
+  top: 90px;
   flex: 0.2;
   border-radius: 10px;
   text-align: center;
@@ -214,6 +214,7 @@ nav {
   border-radius: 10px 10px 0px 0px;
   background-color: var(--primary-background-color);
   padding-bottom: 10px;
+  margin-top: 10px;
 }
 
 .sidebar-top img {
@@ -264,6 +265,15 @@ nav {
   border-radius: 10px;
 }
 
+.sidebar-card-reverse {
+  max-width: 100%;
+  margin-top: 10px;
+  background-color: var(--secondary-background-color);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .sidebar-card h4 {
   font-weight: bolder;
   text-align: left;
@@ -291,9 +301,9 @@ nav {
 
 .postfeed-main-container {
   flex: 0.6;
-  margin: 70px 20px;
-  top: 80px;
-  overflow-y: scroll;
+  margin: 70px 20px 10px 20px;
+  top: 90px;
+  overflow-y: hidden;
 }
 
 .input-container {
@@ -302,6 +312,7 @@ nav {
   padding-bottom: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .post-input {
@@ -406,22 +417,54 @@ nav {
   overflow-wrap: anywhere;
 }
 
-/* News */
+/* Sidebar Right */
 .sidebar-right {
   position: sticky;
-  top: 80px;
+  top: 90px;
   flex: 0.2;
   border-radius: 10px;
   text-align: center;
   height: fit-content;
 }
+.footer-container {
+  margin-top: 10px;
+}
 
-/* @media (max-width: 800px) {
+.footer-container a {
+  text-decoration: none;
+  color: gray;
+  padding: 15px 10px;
+}
+
+.footer-container a:hover {
+  cursor: pointer;
+  color: var(--linkedin-blue);
+}
+
+.footer-brand {
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.footer-brand span {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+@media (max-width: 800px) {
   .main-body {
     flex-direction: column;
-    margin: 10px;
+    margin: 0px 10px;
   }
   .sidebar {
-    width: 100vw;
   }
+}
+/* 
+.main {
+
+  background-color: var(--secondary-background-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 } */
