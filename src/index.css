@@ -306,6 +306,19 @@ nav {
   background-color: lightgray;
 }
 
+.sidebarcard-show-btn {
+  padding: 10px 20px;
+  background-color: var(--primary-background-color);
+  color: var(--linkedin-blue);
+  border: none;
+}
+
+.sidebarcard-show-btn:hover {
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 /* Post feeds */
 
 .postfeed-main-container {

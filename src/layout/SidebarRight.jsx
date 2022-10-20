@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { ReactComponent as LogoIcon } from '../assets/logobug.svg';
 import SidebarCard from './SidebarCard';
 
@@ -14,10 +14,27 @@ function SidebarRight() {
     'IT freshers hiring game strong',
     'Things to learn after something',
   ];
+
+  const guidanceList = ['Seek Help'];
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const pathMatchRoute = (route) => {
+    if (route === location.pathname) {
+      return true;
+    }
+  };
   return (
     <>
       <div className='sidebar-right'>
-        <SidebarCard title='News' list={newsList} />
+        {pathMatchRoute('/jobs') ? (
+          <SidebarCard title='Job seekers guidance' list={guidanceList} />
+        ) : pathMatchRoute('/') ? (
+          <SidebarCard title='News' list={newsList} />
+        ) : pathMatchRoute('/messaging') ? (
+          <SidebarCard title='News' list={newsList} />
+        ) : null}
         <div className='sidebar-card-reverse'>
           <div className='footer-container'>
             <Link to='/about'>About</Link>

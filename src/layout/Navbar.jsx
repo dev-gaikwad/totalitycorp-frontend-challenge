@@ -78,7 +78,7 @@ function Navbar() {
               </div>
             </li>
 
-            <li onClick={() => navigate('/')}>
+            <li onClick={() => navigate('/messaging')}>
               <div className='nav-pill-container'>
                 <div className='nav-pill-icon'>
                   <MessageIcon

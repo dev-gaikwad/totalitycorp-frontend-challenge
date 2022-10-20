@@ -3,7 +3,7 @@ import PostFeed from '../layout/PostFeed';
 import SidebarLeft from '../layout/SidebarLeft';
 import SidebarRight from '../layout/SidebarRight';
 
-function MyNetwork() {
+function Messaging() {
   return (
     <>
       <SidebarLeft />
@@ -13,4 +13,4 @@ function MyNetwork() {
   );
 }
 
-export default MyNetwork;
+export default Messaging;

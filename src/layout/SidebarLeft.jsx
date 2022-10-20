@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { ReactComponent as Avatar } from '../assets/profileavatar.svg';
 import SidebarCard from './SidebarCard';
 
@@ -9,6 +10,24 @@ function Sidebar() {
   const viewStat = '734';
 
   const recentList = ['ReactJS', 'JavaScript', 'CSS3', 'HTML5'];
+  const networkList = [
+    'Connections',
+    'People | Follow',
+    'Events',
+    'Pages',
+    'Groups',
+    'Newsletters',
+    '#Hashtags',
+  ];
+
+  const jobsList = [
+    'My Jobs',
+    'Job Alert',
+    'Skill Assesment',
+    'Resume Builder',
+    'Interview Prep',
+  ];
+  const notificationList = ['No Notifications'];
 
   const formattedConnectionStat = statsFormatter(connectionStat);
   const formattedViewStat = statsFormatter(viewStat);
@@ -22,6 +41,15 @@ function Sidebar() {
       return statNumber;
     }
   }
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const pathMatchRoute = (route) => {
+    if (route === location.pathname) {
+      return true;
+    }
+  };
 
   return (
     <>
@@ -48,7 +76,15 @@ function Sidebar() {
             <p className='stat-number'>{formattedViewStat}</p>
           </div>
         </div>
-        <SidebarCard title='Recents' list={recentList} />
+        {pathMatchRoute('/mynetwork') ? (
+          <SidebarCard title='Manage my network' list={networkList} />
+        ) : pathMatchRoute('/jobs') ? (
+          <SidebarCard list={jobsList} />
+        ) : pathMatchRoute('/notifications') ? (
+          <SidebarCard title='Notifications' list={notificationList} />
+        ) : (
+          <SidebarCard title='Recents' list={recentList} />
+        )}
       </div>
     </>
   );
