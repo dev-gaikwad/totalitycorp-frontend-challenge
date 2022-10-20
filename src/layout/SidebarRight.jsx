@@ -28,12 +28,9 @@ function SidebarRight() {
         </div>
         <div className='sidebar-card-reverse'>
           <div className='footer-container'>
-            <Link to='/about'> About </Link>
-            <Link to='/about'> Github Source </Link>
-            <Link to='/about'> Contact </Link>
-            <Link to='/about'> Linkedin </Link>
-            <Link to='/about'> Privacy Policy </Link>
-            <Link to='/about'> More </Link>
+            <Link to='/about'>About</Link>
+            <Link to='/about'>Linkedin</Link>
+            <Link to='/about'>Github</Link>
           </div>
           <div className='footer-brand'>
             <LogoIcon fill='#0072b1' height='24px' width='24px' />
