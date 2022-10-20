@@ -6,7 +6,6 @@
   padding: 0;
 }
 body {
-  background-color: var(--secondary-background-color);
 }
 :root {
   --linkedin-blue: #0072b1;
@@ -166,15 +165,20 @@ nav {
 /* Main  */
 
 .main {
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw;
+  height: 100vh; */
+  background-color: var(--secondary-background-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .main-body {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+
   /* flex-direction: row; */
-  height: 90%;
+  height: 100%;
   width: 1280px;
   margin: auto;
   padding: 10px 0;
@@ -287,8 +291,8 @@ nav {
 
 .postfeed-main-container {
   flex: 0.6;
-  margin: 0px 20px;
-  top: 0px;
+  margin: 70px 20px;
+  top: 80px;
   overflow-y: scroll;
 }
 

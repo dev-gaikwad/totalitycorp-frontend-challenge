@@ -60,9 +60,15 @@ function PostFeed() {
             />
           </div>
         </div>
+        {/* for actual feeds when the data comes in */}
         {feeds.map((feed) => (
           <FeedContent />
         ))}
+        {/* temporary static feeds */}
+        <FeedContent />
+        <FeedContent />
+        <FeedContent />
+        <FeedContent />
         <FeedContent />
       </div>
     </>
