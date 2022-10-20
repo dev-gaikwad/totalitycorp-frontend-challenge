@@ -4,8 +4,21 @@ import { ReactComponent as Avatar } from '../assets/profileavatar.svg';
 function Sidebar() {
   const username = 'Devendra';
   const email = 'i.devgaikwad@gmail.com';
-  const connectionStat = '108';
-  const viewStat = '73';
+  const connectionStat = '1080';
+  const viewStat = '734';
+
+  const formattedConnectionStat = statsFormatter(connectionStat);
+  const formattedViewStat = statsFormatter(viewStat);
+
+  function statsFormatter(statNumber) {
+    if (statNumber > 999 && statNumber < 1000000) {
+      return (statNumber / 1000).toFixed(1) + 'K'; // convert to K for statNumber from > 1000 < 1 million
+    } else if (statNumber > 1000000) {
+      return '1M+';
+    } else if (statNumber <= 999) {
+      return statNumber;
+    }
+  }
 
   return (
     <>
@@ -25,11 +38,11 @@ function Sidebar() {
         <div className='sidebar-stats-container'>
           <div className='sidebar-stat'>
             <p className='stat-title'>Your Connections</p>
-            <p className='stat-number'>{connectionStat}</p>
+            <p className='stat-number'>{formattedConnectionStat}</p>
           </div>
           <div className='sidebar-stat'>
             <p className='stat-title'>Who viewed you</p>
-            <p className='stat-number'>{viewStat}</p>
+            <p className='stat-number'>{formattedViewStat}</p>
           </div>
         </div>
 

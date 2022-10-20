@@ -426,6 +426,10 @@ nav {
   overflow-wrap: anywhere;
 }
 
+.feed-body img {
+  width: 100%;
+}
+
 .feed-footer {
   max-width: 100%;
   margin: 10px;

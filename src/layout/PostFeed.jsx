@@ -14,6 +14,9 @@ function PostFeed() {
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState('');
 
+  const postImage =
+    'https://images.unsplash.com/photo-1531973576160-7125cd663d86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80';
+
   const handleSubmit = () => {};
 
   // function to see the eligibility of post (min 10 charachters)
@@ -65,9 +68,9 @@ function PostFeed() {
           <FeedContent />
         ))}
         {/* temporary static feeds */}
+        <FeedContent photo={postImage} />
         <FeedContent />
-        <FeedContent />
-        <FeedContent />
+        <FeedContent video='https://www.youtube.com/watch?v=zIKxshOqlAc' />
         <FeedContent />
         <FeedContent />
       </div>
