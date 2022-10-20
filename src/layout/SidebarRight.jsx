@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { ReactComponent as LogoIcon } from '../assets/logobug.svg';
 import SidebarCard from './SidebarCard';
 
@@ -17,7 +17,6 @@ function SidebarRight() {
 
   const guidanceList = ['Seek Help'];
 
-  const navigate = useNavigate();
   const location = useLocation();
 
   const pathMatchRoute = (route) => {

@@ -156,20 +156,6 @@ nav {
   transition: 0.4s;
 }
 
-/* Responsive Navbar consitions */
-
-@media (min-width: 990px) {
-  .hamburger-menu {
-    display: none;
-  }
-  .navbar-col2 {
-    display: flex;
-  }
-  .nav-pill-icon {
-    display: flex;
-  }
-}
-
 /* Main  */
 
 .main {
@@ -485,6 +471,52 @@ nav {
   font-weight: bold;
   margin-left: 5px;
 }
+
+/* Chatbox */
+.chat-head {
+  display: flex;
+  margin-bottom: 10px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  padding: 20px;
+}
+.chat-head:hover .chatbox-container {
+  transform: translateY(0%);
+}
+
+.chatbox-container {
+  width: 15vw;
+  height: fit-content;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  background-color: var(--primary-background-color);
+  transform: translateY(101%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.chat-info {
+  margin-left: 15px;
+}
+
+/* Responsive design */
+
+/* Responsive Navbar consitions */
+
+@media (min-width: 990px) {
+  .hamburger-menu {
+    display: none;
+  }
+  .navbar-col2 {
+    display: flex;
+  }
+  .nav-pill-icon {
+    display: flex;
+  }
+}
+
+/* Responsive Main Content */
 
 @media (max-width: 768px) {
   .main-body {
