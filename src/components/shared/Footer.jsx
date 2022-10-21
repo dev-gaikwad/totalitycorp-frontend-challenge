@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ReactComponent as LogoIcon } from '../assets/logobug.svg';
+import { ReactComponent as LogoIcon } from '../../assets/logobug.svg';
 
 function Footer() {
   const year = new Date().getFullYear();
@@ -8,12 +8,20 @@ function Footer() {
     <footer className='sidebar-card-reverse'>
       <div className='footer-container'>
         <Link to='/about'>About</Link>
-        <Link to='www.linkedin.com/in/devgaikwad' target='_blank'>
+        <a
+          href='https://www.linkedin.com/in/devgaikwad'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           Linkedin
-        </Link>
-        <Link to='www.github.com/devgaikwad' target='_blank'>
+        </a>
+        <a
+          href='https://www.github.com/devgaikwad'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           Github
-        </Link>
+        </a>
       </div>
       <div className='footer-brand'>
         <LogoIcon fill='#0072b1' height='24px' width='24px' />

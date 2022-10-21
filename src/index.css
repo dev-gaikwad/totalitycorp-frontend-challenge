@@ -516,6 +516,31 @@ nav {
   color: gray;
 }
 
+/* Not Found Page */
+.notfound-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 200px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin: auto;
+}
+.back-home-btn {
+  padding: 10px;
+  border: none;
+  background-color: none;
+  font-size: large;
+  color: var(--linkedin-blue);
+  text-decoration: underline;
+}
+.back-home-btn:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
 /* Responsive design */
 
 /* Responsive Navbar consitions */

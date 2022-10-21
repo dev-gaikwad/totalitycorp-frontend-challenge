@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import InputPostFeed from './InputPostFeed';
+import InputPostFeed from './shared/InputPostFeed';
 import FeedContent from './FeedContent';
 
 function PostFeed() {

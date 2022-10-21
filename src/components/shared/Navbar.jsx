@@ -1,13 +1,13 @@
 import React from 'react';
 import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { ReactComponent as LogoIcon } from '../assets/logobug.svg';
-import { ReactComponent as HomeIcon } from '../assets/home.svg';
-import { ReactComponent as NetworkIcon } from '../assets/mynetwork.svg';
-import { ReactComponent as JobsIcon } from '../assets/jobs.svg';
-import { ReactComponent as MessageIcon } from '../assets/messaging.svg';
-import { ReactComponent as NotificationIcon } from '../assets/notification.svg';
-import { ReactComponent as Avatar } from '../assets/profileavatar.svg';
+import { ReactComponent as LogoIcon } from '../../assets/logobug.svg';
+import { ReactComponent as HomeIcon } from '../../assets/home.svg';
+import { ReactComponent as NetworkIcon } from '../../assets/mynetwork.svg';
+import { ReactComponent as JobsIcon } from '../../assets/jobs.svg';
+import { ReactComponent as MessageIcon } from '../../assets/messaging.svg';
+import { ReactComponent as NotificationIcon } from '../../assets/notification.svg';
+import { ReactComponent as Avatar } from '../../assets/profileavatar.svg';
 import UserInfoCard from './UserInfoCard';
 
 function Navbar() {

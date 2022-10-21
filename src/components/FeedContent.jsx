@@ -4,8 +4,8 @@ import { ReactComponent as LikeIcon } from '../assets/like.svg';
 import { ReactComponent as CommentIcon } from '../assets/comment.svg';
 import { ReactComponent as ShareIcon } from '../assets/share.svg';
 import { ReactComponent as SendIcon } from '../assets/send.svg';
-import InputBtn from './InputBtn';
-import UserInfoCard from './UserInfoCard';
+import InputBtn from './shared/InputBtn';
+import UserInfoCard from './shared/UserInfoCard';
 
 function FeedContent(props) {
   const username = 'Totality Corp';

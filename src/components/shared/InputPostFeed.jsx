@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import InputBtn from './InputBtn';
-import { ReactComponent as PhotoIcon } from '../assets/photo.svg';
-import { ReactComponent as VideoIcon } from '../assets/video.svg';
-import { ReactComponent as EventIcon } from '../assets/event.svg';
-import { ReactComponent as ArticleIcon } from '../assets/writearticle.svg';
+import { ReactComponent as PhotoIcon } from '../../assets/photo.svg';
+import { ReactComponent as VideoIcon } from '../../assets/video.svg';
+import { ReactComponent as EventIcon } from '../../assets/event.svg';
+import { ReactComponent as ArticleIcon } from '../../assets/writearticle.svg';
 
 function InputPostFeed() {
   const [userPost, setUserPost] = useState('');

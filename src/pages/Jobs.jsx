@@ -1,7 +1,7 @@
 import React from 'react';
-import PostFeed from '../layout/PostFeed';
-import SidebarLeft from '../layout/SidebarLeft';
-import SidebarRight from '../layout/SidebarRight';
+import PostFeed from '../components/PostFeed';
+import SidebarLeft from '../components/SidebarLeft';
+import SidebarRight from '../components/SidebarRight';
 
 function Jobs() {
   return (
