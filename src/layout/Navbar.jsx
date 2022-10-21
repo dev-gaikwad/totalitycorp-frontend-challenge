@@ -122,10 +122,12 @@ function Navbar() {
                 />
                 <button className='view-profile-btn'>View Profile</button>
                 <div className='dropdown-menu'>
-                  <li>Account</li>
-                  <li>Help</li>
-                  <li>Privacy</li>
-                  <li>Sign Out</li>
+                  <ul>
+                    <li>Account</li>
+                    <li>Help</li>
+                    <li>Privacy</li>
+                    <li>Sign Out</li>
+                  </ul>
                 </div>
               </div>
             </li>

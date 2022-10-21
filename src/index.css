@@ -138,6 +138,11 @@ nav {
   font-size: large;
   padding: 10px;
 }
+
+.dropdown-menu ul {
+  display: flex;
+  flex-direction: column;
+}
 .dropdown-menu li:hover {
   font-weight: bold;
   cursor: pointer;
