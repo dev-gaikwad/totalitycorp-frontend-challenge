@@ -7,7 +7,8 @@ import { ReactComponent as NetworkIcon } from '../assets/mynetwork.svg';
 import { ReactComponent as JobsIcon } from '../assets/jobs.svg';
 import { ReactComponent as MessageIcon } from '../assets/messaging.svg';
 import { ReactComponent as NotificationIcon } from '../assets/notification.svg';
-import { ReactComponent as AvatarIcon } from '../assets/profileavatar.svg';
+import { ReactComponent as Avatar } from '../assets/profileavatar.svg';
+import UserInfoCard from './UserInfoCard';
 
 function Navbar() {
   const [smallDisplay, setSmallDisplay] = useState(false);
@@ -109,18 +110,16 @@ function Navbar() {
             <li className='nav-me'>
               <div className='nav-pill-container'>
                 <div className='nav-pill-icon'>
-                  <AvatarIcon height='36px' width='36px' />
+                  <Avatar height='36px' width='36px' />
                 </div>
                 <div className='nav-pill-text'>Me</div>
               </div>
               <div className='me-dropdown'>
-                <div className='feed-title'>
-                  <AvatarIcon height='48px' width='48px' />
-                  <div className='feed-info'>
-                    <h3>Devendra</h3>
-                    <p>Open to new opportunities</p>
-                  </div>
-                </div>
+                <UserInfoCard
+                  Avatar={Avatar}
+                  username='Devendra'
+                  information='Open to new opportunities'
+                />
                 <button className='view-profile-btn'>View Profile</button>
                 <div className='dropdown-menu'>
                   <li>Account</li>

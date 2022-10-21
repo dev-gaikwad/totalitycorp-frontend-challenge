@@ -110,6 +110,8 @@ nav {
   background-color: var(--primary-background-color);
   padding: 10px;
   position: absolute;
+  border-left: 1px solid lightgray;
+  box-shadow: 5px 5px 5px lightgray;
 }
 
 .nav-me:hover .me-dropdown {
@@ -435,28 +437,6 @@ nav {
   margin-bottom: 10px;
 }
 
-.feed-title {
-  display: flex;
-  margin-bottom: 10px;
-}
-
-.feed-info {
-  margin-left: 15px;
-}
-.feed-info h3 {
-  font-weight: bold;
-}
-.feed-info h3:hover {
-  text-decoration: underline;
-  cursor: pointer;
-  color: var(--linkedin-blue);
-}
-
-.feed-info p {
-  font-size: medium;
-  color: gray;
-}
-
 .feed-body {
   overflow-wrap: anywhere;
 }
@@ -505,6 +485,30 @@ nav {
 .footer-brand span {
   font-weight: bold;
   margin-left: 5px;
+}
+
+/* UserInfo Card */
+
+.userinfo-card-title {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.userinfo-card-info {
+  margin-left: 15px;
+}
+.userinfo-card-info h3 {
+  font-weight: bold;
+}
+.userinfo-card-info h3:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--linkedin-blue);
+}
+
+.userinfo-card-info p {
+  font-size: medium;
+  color: gray;
 }
 
 /* Responsive design */

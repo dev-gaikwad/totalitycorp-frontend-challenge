@@ -5,6 +5,7 @@ import { ReactComponent as CommentIcon } from '../assets/comment.svg';
 import { ReactComponent as ShareIcon } from '../assets/share.svg';
 import { ReactComponent as SendIcon } from '../assets/send.svg';
 import InputBtn from './InputBtn';
+import UserInfoCard from './UserInfoCard';
 
 function FeedContent(props) {
   const username = 'Totality Corp';
@@ -12,13 +13,11 @@ function FeedContent(props) {
   return (
     <>
       <div className='feed-container'>
-        <div className='feed-title'>
-          <Avatar height='48' width='48px' />
-          <div className='feed-info'>
-            <h3>{username}</h3>
-            <p>Information</p>
-          </div>
-        </div>
+        <UserInfoCard
+          Avatar={Avatar}
+          username={username}
+          information='Information'
+        />
         <div className='feed-body'>
           {props.photo ? <img src={props.photo} alt='PostPic' /> : null}
 
