@@ -1,10 +1,9 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { ReactComponent as LogoIcon } from '../assets/logobug.svg';
+import { useLocation } from 'react-router-dom';
+import Footer from './Footer';
 import SidebarCard from './SidebarCard';
 
 function SidebarRight() {
-  const year = new Date().getFullYear();
   const newsList = [
     'Job hiring in boom',
     'Learn more about web3',
@@ -34,19 +33,7 @@ function SidebarRight() {
         ) : pathMatchRoute('/messaging') ? (
           <SidebarCard title='News' list={newsList} />
         ) : null}
-        <div className='sidebar-card-reverse'>
-          <div className='footer-container'>
-            <Link to='/about'>About</Link>
-            <Link to='/about'>Linkedin</Link>
-            <Link to='/about'>Github</Link>
-          </div>
-          <div className='footer-brand'>
-            <LogoIcon fill='#0072b1' height='24px' width='24px' />
-            <span>
-              LinkedIn Clone {'\u00A9'} {year}
-            </span>
-          </div>
-        </div>
+        <Footer />
       </div>
     </>
   );
