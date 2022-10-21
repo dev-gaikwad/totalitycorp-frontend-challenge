@@ -13,7 +13,7 @@ This project was made for the Frontend Challenge of Totality Corp Interview.
   - Routing the pages.
   - Creation of flexbox for the main body of content
   - Creating dynamic cards for sidebar content
-  - Creating input option for posting.
+  - Creating input option for posting with certain conditions.
   - Rendering Feeds.
   - Creating Footer and links
   - Refactor code to make it more generic and reusable
