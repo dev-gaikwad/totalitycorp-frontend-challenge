@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/shared/Navbar';
+import { ContentProvider } from './context/ContentContext';
 
+import Navbar from './components/shared/Navbar';
 import Home from './pages/Home';
 import MyNetwork from './pages/MyNetwork';
 import Jobs from './pages/Jobs';
@@ -10,20 +11,8 @@ import AboutPage from './pages/AboutPage';
 import NotFound from './pages/NotFound';
 
 function App() {
-  // useEffect(() => {
-  //   getData();
-  // }, []);
-
-  // async function getData() {
-  //   const response = await fetch(
-  //     'https://jsonplaceholder.typicode.com/posts/10'
-  //   );
-  //   const postsData = await response.json();
-  //   console.log(postsData);
-  // }
-
   return (
-    <>
+    <ContentProvider>
       <Router>
         <div className='main'>
           <Navbar />
@@ -41,7 +30,7 @@ function App() {
           </div>
         </div>
       </Router>
-    </>
+    </ContentProvider>
   );
 }
 

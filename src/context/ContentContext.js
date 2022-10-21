@@ -1,28 +1,18 @@
-import { createContext, useState, useEffect } from 'react';
+import { createContext, useState } from 'react';
 
 const ContentContext = createContext();
 export const ContentProvider = ({ children }) => {
-  const [post, setPost] = useState();
+  const [userFeed, setUserFeed] = useState([]);
 
-  //   useEffect(() => {
-  //     function getPosts() {
-  //       const response = fetch('https://jsonplaceholder.typicode.com/posts');
-  //       const postsData = response.json();
-  //       console.log(postsData);
-  //       //   setPost(postsData);
-  //     }
-
-  //     getPosts();
-  //   }, []);
-  //   console.log(post);
   return (
-    <ContentProvider
+    <ContentContext.Provider
       value={{
-        post,
+        userFeed,
+        setUserFeed,
       }}
     >
       {children}
-    </ContentProvider>
+    </ContentContext.Provider>
   );
 };
 

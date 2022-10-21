@@ -1,16 +1,24 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import InputBtn from './InputBtn';
 import { ReactComponent as PhotoIcon } from '../../assets/photo.svg';
 import { ReactComponent as VideoIcon } from '../../assets/video.svg';
 import { ReactComponent as EventIcon } from '../../assets/event.svg';
 import { ReactComponent as ArticleIcon } from '../../assets/writearticle.svg';
+import ContentContext from '../../context/ContentContext';
 
 function InputPostFeed() {
+  const { setUserFeed } = useContext(ContentContext);
+
   const [userPost, setUserPost] = useState('');
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState('');
 
-  const handleSubmit = () => {};
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setUserFeed([userPost]);
+
+    setUserPost('');
+  };
 
   // function to see the eligibility of post (min 10 charachters)
   const handleUserPost = (event) => {
