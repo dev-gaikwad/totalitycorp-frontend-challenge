@@ -12,6 +12,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-x: none !important;
 }
 
 :root {
@@ -29,13 +30,12 @@ nav {
   right: 0;
   z-index: 99;
   background-color: var(--primary-background-color);
-  padding: 0 32px;
   display: flex;
   justify-content: space-between;
   border-bottom: 5px solid var(--secondary-background-color);
 }
 
-.navbar-wrap {
+.navbar-container {
   height: 80px;
   width: 1280px;
   margin: 0 auto;
@@ -176,6 +176,7 @@ nav {
   position: relative;
   z-index: 1;
   cursor: pointer;
+  padding: 10px;
 
   user-select: none;
   appearance: none;
@@ -201,12 +202,12 @@ nav {
 /* Main  */
 
 .main {
-  /* width: 100vw;
-  height: 100vh; */
+  /* height: 100vh; */
   background-color: var(--secondary-background-color);
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
 .main-body {
@@ -217,7 +218,7 @@ nav {
   height: 100%;
   width: 1280px;
   margin: auto;
-  padding: 10px 0;
+  /* padding: 10px 0; */
 }
 
 /* Content Feed */
@@ -560,6 +561,10 @@ nav {
 /* Responsive Main Content */
 
 @media (max-width: 768px) {
+  .navbar-searchbar input:focus {
+    width: 200px;
+    border: 1px solid black;
+  }
   .main-body {
     flex-direction: column;
     margin: auto;

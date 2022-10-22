@@ -23,7 +23,7 @@ function Navbar() {
 
   return (
     <nav>
-      <div className='navbar-wrap'>
+      <div className='navbar-container'>
         <div className='navbar-col1'>
           <LogoIcon
             onClick={() => navigate('/')}
@@ -133,13 +133,15 @@ function Navbar() {
             </li>
           </ul>
         </div>
+        <button
+          className='hamburger-menu'
+          onClick={() => setSmallDisplay(true)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
-
-      <button className='hamburger-menu' onClick={() => setSmallDisplay(true)}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </nav>
   );
 }
